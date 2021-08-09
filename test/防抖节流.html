@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">防抖</button>
+    <button id="btn1">节流</button>
+    <script>
+        function debounce(fn, wait) {
+            let timer = null;
+            return function () {
+                const args = arguments;
+                const context = this;
+                console.log(args);
+                if (timer) {
+                    clearTimeout(timer);
+                }
+
+                timer = setTimeout(function() {
+                    clearTimeout(timer);
+                    timer = null;
+                    fn.apply(context, args)
+                }, wait);
+            }
+        }
+
+        // function debounce(fn, wait) {
+        //     let timer = null,
+        //         cando = true;
+
+        //     return function() {
+        //         const args = arguments,
+        //             context = this;
+        //         console.log(args);
+        //         if (cando) {
+        //             fn.apply(context, args);
+        //             cando = false;
+        //         }
+
+        //         if (timer) {
+        //             clearTimeout(timer);
+        //         }
+
+        //         timer = setTimeout(function() {
+        //             cando = true
+        //         }, wait);     
+        //     }
+        // }
+
+        function throttle(fn, wait) {
+            let timer = null;
+            return function() {
+                const args = arguments,
+                    context = this;
+                console.log(args);
+                if (!timer) {
+                    timer = setTimeout(function() {
+                        fn.apply(context, args);
+                        timer = null;
+                        // clearTimeout(timer);
+                    }, wait);
+                }
+            }
+        }
+
+        // function throttle(fn, wait) {
+        //     let activeTime = 0;
+        //     return function() {
+        //         const args = arguments,
+        //             context = this;
+        //         console.log(args);
+        //         const currentTime = Date.now();
+        //         if (currentTime - activeTime > wait) {
+        //             fn.apply(context, args);
+        //             activeTime = Date.now();
+        //         }
+        //     }
+        // }
+
+        document.querySelector('#btn').addEventListener('click', debounce(function() {
+            console.log(1111111);
+        }, 1000));
+
+        document.querySelector('#btn1').addEventListener('click', throttle(function() {
+            console.log(1111111);
+        }, 1000))
+    </script>
+</body>
+</html>
