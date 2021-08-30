@@ -198,3 +198,53 @@ p.then(res => {
 })
 ```
 
+
+
+# promise的面试题
+
+## 间隔一秒输出
+```js
+const list = [1, 2, 3]
+const square = num => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(num * num)
+    }, 1000)
+  })
+}
+
+function test() {
+  list.forEach(async x=> {
+    const res = await square(x)
+    console.log(res)
+  })
+}
+test()
+
+// forEach是不能阻塞的，默认是请求并行发起，所以是同时输出1、4、9。
+```
+## 串行输出
+```js
+async function test() {
+  for (let i = 0; i < list.length; i++) {
+    let x = list[i]
+    const res = await square(x)
+    console.log(res)
+  }
+}
+
+async function test() {
+  for (let x of list) {
+    const res = await square(x)
+    console.log(res)
+  }
+}
+
+let promise = Promise.resolve()
+function test(i = 0) {
+  if (i === list.length) return
+  promise = promise.then(() => square(list[i]))
+  test(i + 1)
+}
+test()
+```
