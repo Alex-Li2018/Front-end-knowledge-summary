@@ -1,0 +1,9 @@
+# dist目录
+dist/
+# node_modules文件
+node_modules/
+# npm锁定版本文件
+*.local
+yarn.lock
+package-lock.json
+

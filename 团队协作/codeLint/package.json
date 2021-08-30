@@ -1,0 +1,46 @@
+{
+  "name": "test-commit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "lint-staged": {
+    "*.{scss,css}": [
+      "stylelint --fix"
+    ],
+    "*.vue": [
+      "stylelint --fix",
+      "eslint --fix --ext"
+    ],
+    "*.js": [
+      "eslint --fix --ext"
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/alex-li2019/test-commit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.15.0",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-webpack": "^0.13.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-vue": "^7.17.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "stylelint": "^13.13.1",
+    "stylelint-scss": "^3.20.1"
+  },
+  "dependencies": {}
+}
