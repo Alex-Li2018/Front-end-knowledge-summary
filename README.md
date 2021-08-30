@@ -1,18 +1,100 @@
-# JavaScript知识总结
+# 前端知识体系
 
-- 编程范式
-- 防抖节流
-- 继承
-- 跨域
-- 模块化
-- 事件循环eventloop
-- 循环引用
-- MVVM与MVC
-- new原理
+## 基础
 
-# ES6知识点
-- let const var 
-- set map
-- promise原理
+### html
 
-# http知识点
+### js
+
+### css
+
+## typeScript
+
+## 计算机网络
+
+## 数据结构与算法
+
+## 单元测试
+
+## 工程化与基础建设
+
+### node基础脚手架
+
+### 基本编译原理
+
+### 构建工具
+
+- webpack
+- rollup
+- esbuild
+
+### 组件库
+
+### 微前端
+
+### 低代码
+
+## 监控
+
+### 性能监控
+
+### 异常监控
+
+## 埋点
+
+## 可视化
+
+### canvas
+
+### webgl
+
+## 跨端
+
+### flutter
+
+### jsbridge
+
+## 小程序
+
+### 微信小程序
+
+### uniapp
+
+### taro
+
+## 框架
+
+### vue
+
+### react
+
+## 团队协作
+
+### git
+
+### eslint
+
+### commitlint
+
+### code review
+
+## DevOps
+
+### docker
+
+### nginx
+
+### jenkins
+
+### CI/CD
+
+## 浏览器
+
+### web安全
+
+### 渲染过程
+
+### 同源策略
+
+### 性能优化
+
