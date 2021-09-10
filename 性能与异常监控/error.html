@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- window的error事件 -->
+    <!-- <script type="text/javascript">
+        window.addEventListener('error', function(error) {
+            console.log(error);
+        });
+
+        let a = 1;
+        a = b;
+    </script> -->
+
+    <!-- promise的错误 -->
+    <script type="text/javascript">
+        const p = new Promise(function(resolve, reject) {
+            queueMicrotask(() => {
+                reject('1');
+            })
+        });
+
+        p.then(res => {
+            console.log(res);
+        })
+        window.addEventListener("unhandledrejection", e => {
+            console.log('unhandledrejection',e)
+        });
+    </script>
+</body>
+</html>
