@@ -81,6 +81,8 @@ npx husky add .husky/commit-msg 'npx --no-install commitlint --edit'
 [前端代码风格自动化系列（二）之Commitlint](https://segmentfault.com/a/1190000017790694)
 [husky文档](https://typicode.github.io/husky/#/)
 [husky升级指南](https://blog.csdn.net/qq_21567385/article/details/116429214)
+[commitlint](https://commitlint.js.org/#/)
+[@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional)
 
 
 

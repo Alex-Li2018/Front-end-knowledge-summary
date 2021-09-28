@@ -4,6 +4,29 @@
 
 - ESLint 是在 ECMAScript/JavaScript 代码中识别和报告模式匹配的工具，它的目标是保证代码的一致性和避免错误
 
+
+# 扫盲文
+[深入理解 ESLint](https://segmentfault.com/a/1190000019896962)
+
+# 常见的eslint插件
+
+- [vue-eslint-parser](https://www.npmjs.com/package/vue-eslint-parser) The ESLint custom parser for .vue files
+
+- [vue-eslint-plugin](https://eslint.vuejs.org/) 它提供了 parser 和 rules。parser 为 vue-eslint-parser，rules 为 https://eslint.vuejs.org/rules/。
+
+- [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import) This plugin intends to support linting of ES2015+ (ES6+) import/export syntax
+
+- [eslint-import-resolver-alias](https://www.npmjs.com/package/eslint-import-resolver-alias) This is a simple Node.js module import resolution plugin for eslint-plugin-import
+
+- [eslint-import-resolver-webpack](https://www.npmjs.com/package/eslint-import-resolver-webpack) eslint解析webpack里的config
+
+# vscode支持webpack里的alias
+[vscode 下 支持webpack配置alias](https://www.jianshu.com/p/9e853a9ea7fc)
+
+# Prettier
+
+[Prettier](https://prettier.io/docs/en/index.html)
+
 文件: .eslintrc
 ```js
 module.exports = {
